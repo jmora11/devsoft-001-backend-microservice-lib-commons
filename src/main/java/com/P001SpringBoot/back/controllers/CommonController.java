@@ -54,6 +54,7 @@ public class CommonController<E, S extends ICommonService<E>> {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteStudent(@PathVariable Long id) {
+        System.out.println('I'+ id);
         service.deleteById(id);
         return ResponseEntity.noContent().build();
     }
